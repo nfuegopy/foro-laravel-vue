@@ -13,8 +13,8 @@ Asegúrate de tener instalados los siguientes programas en tu máquina:
 Clona este repositorio en tu máquina local:
 
 ```bash
-git clone https://github.com/<tu-usuario>/<nombre-repositorio>.git
-cd <nombre-repositorio>
+git clone [https://github.com/<tu-usuario>/<nombre-repositorio>.git](https://github.com/nfuegopy/foro-laravel-vue)
+cd foro-laravel-vue
 ```
 
 ## Configurar y levantar el proyecto
