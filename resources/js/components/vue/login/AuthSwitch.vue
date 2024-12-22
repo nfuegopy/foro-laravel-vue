@@ -1,4 +1,3 @@
-<!-- AuthSwitch.vue -->
 <template>
     <div class="min-h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex items-center justify-center p-4">
         <div class="bg-white shadow-xl rounded-lg p-6 w-full max-w-sm text-center">
@@ -18,7 +17,7 @@
             </div>
 
             <transition name="fade" mode="out-in">
-                <component :is="componenteActual" />
+                <component :is="componenteActual" @registro-exitoso="cambiarAVistaLogin" />
             </transition>
         </div>
     </div>
@@ -52,24 +51,17 @@ export default {
                 : "Crea tu cuenta";
         });
 
+        const cambiarAVistaLogin = () => {
+            state.value = 0; // Cambiar a la vista de inicio de sesión
+        };
+
         return {
             state,
             toggleState,
             componenteActual,
             tituloActual,
+            cambiarAVistaLogin,
         };
     },
 };
 </script>
-
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.3s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-}
-</style>
