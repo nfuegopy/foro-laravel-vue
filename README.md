@@ -204,3 +204,17 @@ SCOUT_DRIVER=meilisearch
 MEILISEARCH_HOST=http://meilisearch:7700
 
 MEILISEARCH_NO_ANALYTICS=false
+
+
+
+
+Como levantar en docker
+paso 03 - docker run --rm --interactive --tty -v $(pwd):/app composer install   
+paso 04 - ./vendor/bin/sail up --build  
+paso 05 - ./vendor/bin/sail npm install  
+paso 06 - ./vendor/bin/sail npm run dev  
+paso 07 - ./vendor/bin/sail npm run build  
+
+paso 08 - verificar migraciones BD mysql  
+paso 09 - levantar el proyecto  con ./vendor/bin/sail up --d  
+paso 10 - ejecutar migraciones en caso de que solicite
